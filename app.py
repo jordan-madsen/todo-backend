@@ -44,7 +44,7 @@ def get_todos():
 @app.route("/add-todo", methods=["POST"])
 def add_todo():
     title = request.json["title"]
-    done =request.json["done"]
+    done = request.json["done"]
 
     record = Todo(title, done)
     db.session.add(record)
